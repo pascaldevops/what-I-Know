@@ -1,0 +1,172 @@
+/*
+ Heading: font-family: 'Lato', sans-serif;
+ Body Text: font-family: 'Merriweather', serif;
+ font-family: 'Sacramento', cursive;
+*/
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  display: inline-block;
+  color: #7D97AD;
+  text-decoration: none;
+  padding: 2% 3% 3% 0
+}
+
+li {
+  text-decoration: none;list-style-type: none;
+}
+
+.ability-score {
+  color: #000;
+}
+
+/* Welcome Section */
+#welcome-section {
+  background-color: #7d97ad;
+  padding: 2% 3% 10%;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: #fff;
+}
+
+/* About Me Section */
+
+.about-me {
+  margin-top: 7%;
+}
+
+.about-me-title {
+  margin-bottom: 0px;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+.about-me-heading {
+  border-width: 0 0 0 3px;
+  padding: 0 0 0 30px;
+  border-style: solid;
+  border-image: linear-gradient(#7d97ad, #fff) 20;
+}
+
+.about-me-heading {
+  color: #DCE3E9;
+  font-size: 1.5rem;
+}
+
+.about-me-small-heading {
+  display: block;
+ font-size: 1rem;
+}
+
+.about-me-myname {
+  margin: 0;
+  padding: 0 30px 0 0;
+  position: relative;
+  top: 30%;
+  bottom: 50%;
+  font-family: 'Sacramento', cursive;
+  font-size: 3.625rem;
+  text-align: right;
+  color: #C4D0DA
+}
+
+/* Profile Section */
+.container {
+  padding: 4% 7% 0
+}
+
+.profile-image {
+  height: 250px;
+  width: 250px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Featured Projects */
+
+#projects {
+  padding: 4% 10% 0;
+}
+
+.featured-work-heading {
+  font-size: 32px;
+  color: #7d97ad;
+}
+
+/* Skills */
+
+#skills {
+  padding: 4% 10% 10%;
+  color: #fff;
+  background-color: #A0B3C3;
+}
+
+.skill-list {
+  padding: 0;
+}
+
+.skills-work-heading {
+  font-size: 32px;
+  color: #FFF;
+}
+
+.skill-li {
+  display: flex;
+  justify-content: space-between;
+  transition: 0.8s;
+}
+
+.skill-li:hover {
+  background-color: #deecfc;
+  color: #7d97ad;
+  opacity: 1;
+}
+
+
+/************************** Footer Section  **************************/
+#footer {
+  background-color: #fff;
+  padding: 5%;
+  text-align: center;
+}
+
+.footer-copyright {
+  color: #7D97AD;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+/************************** Media Query  **************************/
+
+@media (max-width: 767px) {
+
+  .about-me-heading {
+    margin-top: 5%;
+    border-width: 0 0 0 0;
+  }
+
+  p.about-me-title.mt-5 {
+    margin:  2% 0 3% 0;
+  }
+
+  .welcome {
+    margin-bottom: 5%;
+  }
+
+  .about-me-myname {
+    margin-bottom:  15%;
+  }
+  .about-me-myname,
+  .about-me-heading,
+  .about-me-small-heading {
+    text-align: center !important;
+  }
+}

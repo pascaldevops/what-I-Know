@@ -1,0 +1,1 @@
+callback functions are functions that accept other functions as parameters. They are also called "higher order functions."

@@ -1,0 +1,43 @@
+html {
+	height: 100%;
+}
+
+body {
+    background: url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467);
+    background-size: cover;
+    background-position: center; 
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+.bg-light {
+	margin-bottom: 15px;
+	background-color: #2c3e50;
+}
+
+#content {
+	text-align: center;
+	padding-top: 25%;
+	color: white;
+	text-shadow: 0px 4px 3px rgba(100,0,0,0.6),
+				 0px 8px 13px rgba(0,0,0.4),
+				 0px 18px 23px rgba(0,0,0,0.4);
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+hr {
+	width: 300px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+Hi,
+
+I receive the items on a flat box. Opened the box I only saw three cartridges. They are as followed: CHCE262A, CHCE263A, and CHCE261A. Would you please mail me the missing cartridge. Unfortunately I do not receive it by Monday, you left me no choice but to return the items. Please respond ASAP. Thank you

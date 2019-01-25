@@ -1,0 +1,1 @@
+All file system operations have synchronous and asynchronous forms.

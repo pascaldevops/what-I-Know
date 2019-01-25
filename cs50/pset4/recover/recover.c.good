@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdint.h>
+
+#define BLOCK_SIZE 512
+
+int main(int argc, char *argv[])
+{
+    /*****************************
+    * Variable declaration
+    *****************************/
+
+    // open the memory card file
+    FILE* inputCardFile = NULL;
+    FILE* outCardFile = NULL;       // File to the recovery
+    int counter = 0;                // file counter
+    uint8_t block[BLOCK_SIZE];      // serve as block
+    char filename[8];
+
+    /*****************************
+    * Start Processing
+    *****************************/
+
+    if (argc != 2)
+    {
+        fprintf(stderr, "Usage: ./recover infile\n");
+        return 1;
+    }
+
+    inputCardFile = fopen(argv[1], "r");
+
+    // make sure the memory card file isn't empty
+    if (inputCardFile == NULL)
+    {
+        printf("Unable to read card.raw\n");
+        // Why keep it open if it is empty. close it.
+        fclose(inputCardFile);
+        return 1;
+    }
+
+
+// read card file block by block
+while(fread(block, sizeof(block), 1, inputCardFile) == 1)
+{
+    // JPEG header
+    if(block[0] == 0xff && block[1] == 0xd8 && block[2] == 0xff && (block[3] >= 0xe0 && block[3] <= 0xef))
+    {
+        if (outCardFile != NULL)
+        {
+            fclose(outCardFile);
+        }
+
+        // JPEG block found, create new file
+        sprintf(filename, "%03d.jpg", counter);
+
+        // open file outCardFile for writing
+        outCardFile = fopen(filename, "w");
+
+        // keep track of the JPEG block found in file
+        counter++;
+
+        // write to outCardFile
+        fwrite(block, sizeof(block), 1, outCardFile);
+    }
+    else if (counter > 0)
+    {
+         fwrite(block, sizeof(block), 1, outCardFile);
+    }
+    else
+    {
+        fread(block, sizeof(block), 1, inputCardFile);
+    }
+}
+// close the file
+fclose(inputCardFile);
+return 0;
+}

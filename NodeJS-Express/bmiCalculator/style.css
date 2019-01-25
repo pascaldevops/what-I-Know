@@ -1,0 +1,51 @@
+/*
+ Heading: font-family: 'Lato', sans-serif;
+ Body Text: font-family: 'Merriweather', serif;
+ font-family: 'Sacramento', cursive;
+*/
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.container {
+  width: 50%;
+}
+
+h1 {
+  width: 50%;
+  background-color: #7d97ad;
+  text-align: center;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+form {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.height {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.height input {
+  width: 20%;
+  text-align: right;
+}
+
+.weight {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.weight input {
+  width: 41%;
+  text-align: right;
+}
+
+.button {
+   display: flex;
+   justify-content: center;
+}

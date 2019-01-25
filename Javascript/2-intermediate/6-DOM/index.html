@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- make sure for now that your script tag is in the head -->
+    <title>Document</title>
+</head>
+<body id= "container">
+    <div class="hello">
+        Hello World
+    </div>
+    <div class="hello">
+        Hello Everyone!
+    </div>
+    <a href="#">This link goes nowhere!</a>
+    <button>Click me!</button>
+    <script>
+        /** 
+         *  Here you will learn how to do the followings:
+         *      -- Selecting elements
+         *      -- How to manipulate the DOM
+         */
+        
+        // SELECTING ELEMENTS
+        // 
+        // you can put your JavaScript in here, or include an external file.
+        // Selecting a single element
+        var containerByID = document.getElementById('container');
+        // console.log(containerByID);
+
+        var containerSelect = document.querySelector('#container');
+        // console.log(containerSelect);
+
+        // selecting a list of elements using the element names
+        var div = document.getElementsByTagName('div');
+        div = document.querySelectorAll('div');
+
+        // selecting a list of elements using the class name
+        div = document.getElementsByClassName('hello');
+        div = document.querySelectorAll('.hello')
+       // console.log(div);
+
+        /** 
+         * DOM MANIPULATION
+         * -- Change attributes and values on DOM elements
+         * -- Traverse the DOM
+         * -- Add, create and remove DOM elements
+         */
+        
+        // Modifying properties and attributes on elements in the DOM
+        // 
+        var firstDiv = document.getElementsByTagName('div')[0];
+        firstDiv.innerHTML = '<strong>Just changed</strong>';
+        
+        var secondDiv = document.getElementsByTagName('div')[1];
+        secondDiv.innerText = 'Just changed Again!';
+
+        firstDiv.style.color = 'red';
+        secondDiv.style.backgroundColor = 'teal';
+
+        // Accessing/modifying attributes on elements
+        // 
+        var body = document.getElementById('container');
+        body.getAttribute('id'); //=> container
+        //body.setAttribute('id', 'new_container');
+        //body.getAttribute('id'); //=> new_container
+
+        //Add and remove classes to/from elements using classList
+        //
+        var secondDiv = document.getElementsByTagName('div')[1];
+        secondDiv.classList
+        secondDiv.classList.add('another_class'); // add a class name another_class
+        secondDiv.classList.remove('hello'); // remove the hello class
+       // console.log(secondDiv);
+
+        // Traversing the DOM - Meaning looking for elements inside other elements
+        // 
+        var container = document.getElementById('container');
+        console.log(container.childNodes); // NodeList of all the nodes of container that are its children. It also include the element text
+        console.log(container.children); // HTMLCollection => contains all of the elements that are children of the element we have selected
+        console.log(container.children.length); // 5
+
+        var link = document.querySelector('a');
+        console.log(link.parentElement); // <body id= "container">
+        console.log(link.previousElementSibling); // <div class="hello">Hello Everyone</div>
+        console.log(link.previousSibling); // text node
+        console.log(link.nextSibling);
+        console.log(link.nextElementSibling); // <button>Click me!</button>
+
+        // Creating and appending elements to the DOM
+        // 
+         var button = document.createElement('button'); // Create the element
+         button.innerText = "I am a a button created with JavaScript";
+
+         var container = document.getElementById('container'); // slect where to place the element
+         container.appendChild(button); // place the element on the DOM
+
+        // Removing an element from the DOM
+        // 
+        var linkToBeRemoved = document.querySelector('a'); // select the element to be removed
+        var container = document.getElementById('container'); // select where to remove the element
+        container.removeChild(linkToBeRemoved);
+        console.log(container);
+
+        // Changing multiple elements at once
+        //    
+        var divs = document.querySelectorAll('div'); // select all the divs
+        //divs.style.backgroundColor = 'red'; // error: Uncaught TypeError: Cannot set property 'backgroundColor' of undefined. It makes sense. You need to individually set the background color of each div one by one. use a loop to that
+        
+        divs.forEach( function(div) {
+            div.style.backgroundColor = 'red';
+        });
+
+    </script>
+</body>
+</html>

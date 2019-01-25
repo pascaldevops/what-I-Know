@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- make sure for now that your script tag is in the head -->
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <script>
+        // Adding items
+        localStorage.setItem('instructor', 'Pascal');
+        localStorage.setItem('age', 21);
+        localStorage.setItem('isCoolDude', true);
+
+        // retrieve items
+        localStorage.getItem('age');
+
+        // remove an item
+        localStorage.removeItem('age');
+        
+        // remove everything
+        localStorage.clear();
+
+        // Adding objects
+        var instructors = ['Jude', 'Mona', 'Sean'];
+        localStorage.setItem('instructors', instructors) // remember everthing is converted to a string
+        console.log(localStorage.getItem('instructors')); //=> Jude,Mona,Sean
+
+        // From string to JSON object- when you want things to stored as a JSON objects
+        localStorage.clear();
+        instructors = ['Jude', 'Mona', 'Sean'];
+        localStorage.setItem('instructors', JSON.stringify(instructors));
+        console.log(localStorage.getItem('instructors')); //=> ["Jude","Mona","Sean"]
+
+        // From JSON to javascript
+        var instructor = JSON.parse(localStorage.getItem('instructors'));
+        console.log(instructor);
+
+
+    </script>
+</body>
+</html>
