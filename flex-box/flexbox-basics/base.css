@@ -1,0 +1,90 @@
+/*basic styles*/
+html,
+body {
+  margin: 0;
+}
+html {
+  background: #2c3e50;
+}
+body {
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2%;
+  line-height: 1.6;
+  text-align: center;
+  height: 3000px;
+}
+
+.flex-container {
+  border: 1px solid white;
+  max-width: 900px;
+  margin: auto;
+}
+
+.flex-item {
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+  margin: 0;
+  line-height: 1;
+  font-family: 'Asap', sans-serif;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 4em;
+  margin-bottom: 50px;
+}
+h3 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+p {
+  font-size: 1.5em;
+}
+
+.article1 {
+  background-color: red;
+  padding: 20px;
+  margin: 20px;
+}
+
+.article2 {
+  background-color: blue;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Flexbox Staff */
+.flex-container1 {
+  display: flex;
+  height: 300px;
+  /* The flow is colunm. I affect the element along the main axis on the horizontal line*/
+  /* Put a space between elements on the main axis */
+  flex-flow: column;
+  justify-content: space-between;
+  border: 1px solid white;
+  margin: 20px;
+}
+
+.flex-container2 {
+  display: flex;
+  height: 300px;
+  /* The flow is row. It affects the element along the main on the vertical line*/
+  /* Put a space between elements on the main axis */
+  flex-flow: row;
+  justify-content: space-between;
+  border: 1px solid white;
+  margin: 20px;
+}
+
+.flex-item {
+}
