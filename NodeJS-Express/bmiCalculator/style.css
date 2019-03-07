@@ -45,7 +45,17 @@ form {
   text-align: right;
 }
 
+.your-bmi {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.your-bmi input {
+  width: 41%;
+  text-align: right;
+}
+
 .button {
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
 }

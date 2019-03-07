@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>BMI Calculator</title>
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Merriweather"
+      rel="stylesheet"
+    />
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>BMI Calculator</h1>
@@ -15,12 +18,31 @@
       <form action="/bmicalculator" method="post">
         <label class="height" for="height">
           Height
-          <input type="text" name="height-feet" id="height" placeholder="feet">
-          <input type="text" name="height-inch" id="height" placeholder="inches">
+          <input
+            type="text"
+            name="height-feet"
+            id="height"
+            placeholder="feet"
+          />
+          <input
+            type="text"
+            name="height-inch"
+            id="height"
+            placeholder="inches"
+          />
         </label>
         <label class="weight" for="weight">
           Weight
-          <input type="text" name="weight" id="weight" placeholder="pound">
+          <input type="text" name="weight" id="weight" placeholder="pound" />
+        </label>
+        <label class="your-bmi" for="yourBmi">
+          Your BMI
+          <input
+            type="text"
+            name="yourBmi"
+            id="yourBmi"
+            placeholder="Your BMI"
+          />
         </label>
         <div class="button">
           <button type="submit" name="submit">Calculate BMI</button>
