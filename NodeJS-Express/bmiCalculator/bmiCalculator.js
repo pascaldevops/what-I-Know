@@ -26,7 +26,7 @@ app.post('/bmiCalculator', function(req, res) {
   const heightInInches1 = parseFloat(req.body['height-feet']) * 12
   const heightInInches2 = parseFloat(req.body['height-inch'])
   const result = (weight * 703) / Math.pow(heightInInches1 + heightInInches2, 2)
-
+  zAW
   res.send(`Your BMI is ${result.toFixed(2)}`)
 })
 
